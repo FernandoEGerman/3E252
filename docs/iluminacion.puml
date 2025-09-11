@@ -1,25 +1,26 @@
 @startuml iluminacion
-class humano 
-class foco{
-    -Estadofoco estado
-    +encender()
-    +apagar()
-    +Estadofoco mostrarestado()
+
+class Humano
+class Foco{
+    - EstadoFoco estado
+    + Encender()
+    + Apagar()
+    + EstadoFoco MostrarEstado()
     
 }
 
-class Estadofoco
+class EstadoFoco
 class serieNavidad{
-    -foco focos[10]
-    +encender()
-    +apagar()
+    -Foco focos[10]
+    +Encender()
+    +Apagar()
     +ImprimirSerie()
 }
 
-humano o-- foco
-foco *-- Estadofoco
-Estadofoco --|> Bool
-serieNavidad "1" *-- "10" foco
-humano o-- serieNavidad
+Humano o-- Foco
+Foco *-- EstadoFoco
+EstadoFoco --|> Bool
+SerieNavidad "1" *-- "10" Foco
+Humano o-- SerieNavidad
 
 @enduml
