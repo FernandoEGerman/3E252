@@ -1,5 +1,6 @@
 #include <iostream>
-int main(){
+using namespace std;
+int main(int argc, char const *argv[]){
 
     int *pNumeros  =NULL;
     pNumeros = new int;
